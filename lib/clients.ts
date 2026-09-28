@@ -14,7 +14,7 @@ export type ClientDeck = {
   extraReplacements?: [string, string][]
 }
 
-export const clients: ClientDeck[] = [{ slug: 'munichre', name: 'Munich Re' }]
+export const clients: ClientDeck[] = [{ slug: 'defaultagency', name: 'DefaultAgency' }]
 
 export function getClient(slug: string): ClientDeck | undefined {
   return clients.find((c) => c.slug === slug)

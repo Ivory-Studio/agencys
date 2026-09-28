@@ -10,35 +10,35 @@ const nextConfig = {
     return [
       {
         source: '/portraits-linkedin.html',
-        destination: '/munichre/portraits-linkedin.html',
+        destination: '/defaultagency/portraits-linkedin.html',
       },
       {
         source: '/portraits-epo.html',
-        destination: '/munichre/portraits-epo.html',
+        destination: '/defaultagency/portraits-epo.html',
       },
       {
         source: '/portraits-staatsoper.html',
-        destination: '/munichre/portraits-staatsoper.html',
+        destination: '/defaultagency/portraits-staatsoper.html',
       },
       {
         source: '/portraits-puma.html',
-        destination: '/munichre/portraits-puma.html',
+        destination: '/defaultagency/portraits-puma.html',
       },
       {
-        source: '/munichre/portraits-linkedin',
-        destination: '/munichre/portraits-linkedin.html',
+        source: '/defaultagency/portraits-linkedin',
+        destination: '/defaultagency/portraits-linkedin.html',
       },
       {
-        source: '/munichre/portraits-epo',
-        destination: '/munichre/portraits-epo.html',
+        source: '/defaultagency/portraits-epo',
+        destination: '/defaultagency/portraits-epo.html',
       },
       {
-        source: '/munichre/portraits-staatsoper',
-        destination: '/munichre/portraits-staatsoper.html',
+        source: '/defaultagency/portraits-staatsoper',
+        destination: '/defaultagency/portraits-staatsoper.html',
       },
       {
-        source: '/munichre/portraits-puma',
-        destination: '/munichre/portraits-puma.html',
+        source: '/defaultagency/portraits-puma',
+        destination: '/defaultagency/portraits-puma.html',
       },
     ]
   },
