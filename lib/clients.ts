@@ -14,7 +14,24 @@ export type ClientDeck = {
   extraReplacements?: [string, string][]
 }
 
-export const clients: ClientDeck[] = [{ slug: 'defaultagency', name: 'DefaultAgency' }]
+export const clients: ClientDeck[] = [
+  { slug: 'defaultagency', name: 'DefaultAgency' },
+  { slug: 'accenture-song-w3fj', name: 'Accenture Song' },
+  { slug: 'bbdo-69p7', name: 'BBDO' },
+  { slug: 'antoni-jg7e', name: 'antoni' },
+  { slug: 'mother-pxqd', name: 'Mother' },
+  { slug: 'kemmler-kemmler-pd2x', name: 'Kemmler Kemmler' },
+  { slug: 'heimattbwa-86pw', name: 'HeimatTBWA' },
+  { slug: 'ogilvy-8cyf', name: 'Ogilvy' },
+  { slug: 'rysm-k67a', name: 'RYSM' },
+  { slug: 'fette-beute-sbyq', name: 'Des Wahnsinns Fette Beute' },
+  { slug: 'la-red-xcgm', name: 'la red' },
+  { slug: 'grey-6nra', name: 'Grey' },
+  { slug: 'haeppy-fs44', name: 'häppy' },
+  { slug: 'leo-burnett-6w45', name: 'Leo Burnett' },
+  { slug: 'knsk-mvkj', name: 'KNSK' },
+  { slug: 'thjnk-vhuq', name: 'thjnk' },
+]
 
 export function getClient(slug: string): ClientDeck | undefined {
   return clients.find((c) => c.slug === slug)
