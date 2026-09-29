@@ -24,7 +24,7 @@ export const clients: ClientDeck[] = [
   { slug: 'heimattbwa-86pw', name: 'HeimatTBWA' },
   { slug: 'ogilvy-8cyf', name: 'Ogilvy' },
   { slug: 'rysm-k67a', name: 'RYSM' },
-  { slug: 'fette-beute-sbyq', name: 'Des Wahnsinns Fette Beute' },
+  { slug: 'fette-beute-sbyq', name: 'DES WAHNSINNS FETTE BEUTE' },
   { slug: 'la-red-xcgm', name: 'la red' },
   { slug: 'grey-6nra', name: 'Grey' },
   { slug: 'haeppy-fs44', name: 'häppy' },
