@@ -46,6 +46,7 @@ export async function GET(
       let html = file
         .toString()
         .replaceAll('Munich Re', client.name)
+        .replaceAll('Munich%20Re', encodeURIComponent(client.name))
         .replaceAll('/munichre/', `/${slug}/`)
         .replaceAll('href="portraits-', `href="/${slug}/portraits-`)
 
