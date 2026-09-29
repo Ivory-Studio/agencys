@@ -31,6 +31,7 @@ export const clients: ClientDeck[] = [
   { slug: 'leo-burnett-6w45', name: 'Leo Burnett' },
   { slug: 'knsk-mvkj', name: 'KNSK' },
   { slug: 'thjnk-vhuq', name: 'thjnk' },
+  { slug: 'scholz-friends-berlin-4zss', name: 'Scholz & Friends Berlin' },
 ]
 
 export function getClient(slug: string): ClientDeck | undefined {
