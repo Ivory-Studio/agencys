@@ -21,7 +21,7 @@ export const clients: ClientDeck[] = [
   { slug: 'antoni-jg7e', name: 'antoni' },
   { slug: 'mother-pxqd', name: 'Mother' },
   { slug: 'kemmler-kemmler-pd2x', name: 'Kemmler Kemmler' },
-  { slug: 'heimattbwa-86pw', name: 'HeimatTBWA' },
+  { slug: 'heimattbwa-86pw', name: 'Mr. Heffels' },
   { slug: 'ogilvy-8cyf', name: 'Ogilvy' },
   { slug: 'rysm-k67a', name: 'RYSM' },
   { slug: 'fette-beute-sbyq', name: 'DES WAHNSINNS FETTE BEUTE' },
