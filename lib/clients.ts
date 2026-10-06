@@ -35,6 +35,7 @@ export const clients: ClientDeck[] = [
   { slug: 'brunp-recycling-ef4n', name: 'Brunp Recycling' },
   { slug: 'catl-qgfv', name: 'CATL' },
   { slug: 'yddo-w74x', name: 'yddo' },
+  { slug: 'paulaner-ev83', name: 'Paulaner' },
 ]
 
 export function getClient(slug: string): ClientDeck | undefined {
