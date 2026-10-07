@@ -40,6 +40,7 @@ export const clients: ClientDeck[] = [
   { slug: 'havas-jmxy', name: 'Havas' },
   { slug: 'scholz-friends-hamburg-93wu', name: 'Scholz & Friends Hamburg' },
   { slug: 'leo-germany-qepe', name: 'Leo Germany' },
+  { slug: 'twenty-rising-y2w8', name: 'Twenty Rising' },
 ]
 
 export function getClient(slug: string): ClientDeck | undefined {
