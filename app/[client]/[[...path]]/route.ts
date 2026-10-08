@@ -4,6 +4,9 @@ import { NextResponse } from 'next/server'
 import { getClient } from '@/lib/clients'
 
 const siteRoot = path.join(process.cwd(), 'public', 'munichre')
+const langRoots: Record<string, string> = {
+  zh: path.join(process.cwd(), 'public', 'munichre-zh'),
+}
 const contentTypes: Record<string, string> = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -32,14 +35,22 @@ export async function GET(
   }
 
   const requestedPath = segments.length === 0 ? 'index.html' : segments.join('/')
-  const filePath = path.resolve(siteRoot, requestedPath)
 
-  if (!filePath.startsWith(`${siteRoot}${path.sep}`) && filePath !== siteRoot) {
+  // Guard against path traversal using the shared root, then pick the
+  // language root for HTML. Assets always come from the shared root.
+  const safePath = path.resolve(siteRoot, requestedPath)
+  if (!safePath.startsWith(`${siteRoot}${path.sep}`) && safePath !== siteRoot) {
     return new NextResponse('Not found', { status: 404 })
   }
 
+  const extension = path.extname(safePath).toLowerCase()
+  const langRoot = client.lang ? langRoots[client.lang] : undefined
+  const filePath =
+    langRoot && extension === '.html'
+      ? path.join(langRoot, path.relative(siteRoot, safePath))
+      : safePath
+
   try {
-    const extension = path.extname(filePath).toLowerCase()
     let file = await readFile(filePath)
 
     if (extension === '.html') {

@@ -7,10 +7,15 @@
 //
 // No new folders or files are needed — the dynamic route at
 // app/[client]/[[...path]]/route.ts serves any client listed here.
+//
+// Set `lang: 'zh'` to serve the Chinese deck from public/munichre-zh.
+// Images and videos always come from public/munichre, so translations
+// only need the HTML files.
 
 export type ClientDeck = {
   slug: string
   name: string
+  lang?: 'de' | 'zh'
   extraReplacements?: [string, string][]
 }
 
@@ -46,6 +51,7 @@ export const clients: ClientDeck[] = [
   { slug: 'ketchum-fhus', name: 'Ketchum' },
   { slug: 'cheil-worldwide-s7tn', name: 'Cheil Worldwide' },
   { slug: 'dentsu-me5f', name: 'dentsu' },
+  { slug: 'hello-china-n9kt', name: 'China', lang: 'zh' },
 ]
 
 export function getClient(slug: string): ClientDeck | undefined {
