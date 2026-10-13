@@ -52,6 +52,7 @@ export const clients: ClientDeck[] = [
   { slug: 'cheil-worldwide-s7tn', name: 'Cheil Worldwide' },
   { slug: 'dentsu-me5f', name: 'dentsu' },
   { slug: 'hello-china-n9kt', name: 'China', lang: 'zh' },
+  { slug: 'deutsche-bahn-dpsr', name: 'Deutsche Bahn' },
 ]
 
 export function getClient(slug: string): ClientDeck | undefined {
