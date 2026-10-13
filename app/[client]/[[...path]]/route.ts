@@ -6,6 +6,7 @@ import { getClient } from '@/lib/clients'
 const siteRoot = path.join(process.cwd(), 'public', 'munichre')
 const langRoots: Record<string, string> = {
   zh: path.join(process.cwd(), 'public', 'munichre-zh'),
+  'en-eb': path.join(process.cwd(), 'public', 'munichre-en-eb'),
 }
 const contentTypes: Record<string, string> = {
   '.html': 'text/html; charset=utf-8',
