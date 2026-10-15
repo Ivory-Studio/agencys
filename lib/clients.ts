@@ -9,14 +9,15 @@
 // app/[client]/[[...path]]/route.ts serves any client listed here.
 //
 // Set `lang: 'zh'` for the Chinese deck (public/munichre-zh) or
-// `lang: 'en-eb'` for the English employer-branding cut (public/munichre-en-eb).
+// `lang: 'en-eb'` for the English employer-branding cut (public/munichre-en-eb),
+// or `lang: 'de-eb'` for the German employer-branding cut (public/munichre-de-eb).
 // Images and videos always come from public/munichre, so translations
 // only need the HTML files.
 
 export type ClientDeck = {
   slug: string
   name: string
-  lang?: 'de' | 'zh' | 'en-eb'
+  lang?: 'de' | 'zh' | 'en-eb' | 'de-eb'
   extraReplacements?: [string, string][]
 }
 
@@ -55,6 +56,23 @@ export const clients: ClientDeck[] = [
   { slug: 'hello-china-n9kt', name: 'China', lang: 'zh' },
   { slug: 'deutsche-bahn-dpsr', name: 'Deutsche Bahn' },
   { slug: 'db-employer-branding-rdfu', name: 'Deutsche Bahn', lang: 'en-eb' },
+  // Employer-Branding-Kaltakquise Oktober 2026 (IVORY NEWS Liste)
+  { slug: 'bsh-p5tm', name: 'BSH', lang: 'de-eb' },
+  { slug: 'siemens-energy-yd7g', name: 'Siemens Energy', lang: 'en-eb' },
+  { slug: 'siemens-uk-c6yz', name: 'Siemens', lang: 'en-eb' },
+  { slug: 'allianz-aobb', name: 'Allianz', lang: 'de-eb' },
+  { slug: 'mercedes-benz-3tjm', name: 'Mercedes-Benz', lang: 'de-eb' },
+  { slug: 'telekom-zk8b', name: 'Deutsche Telekom', lang: 'de-eb' },
+  { slug: 'volkswagen-l34l', name: 'Volkswagen', lang: 'de-eb' },
+  { slug: 'bosch-1o3c', name: 'Bosch', lang: 'de-eb' },
+  { slug: 'everllence-mvi5', name: 'Everllence', lang: 'de-eb' },
+  { slug: 'rwe-iz2w', name: 'RWE', lang: 'de-eb' },
+  { slug: 'turck-hojb', name: 'Turck', lang: 'de-eb' },
+  { slug: 'leoni-ck1k', name: 'Leoni', lang: 'de-eb' },
+  { slug: 'leoni-china-kfe3', name: 'Leoni China', lang: 'en-eb' },
+  { slug: 'daimler-truck-jeka', name: 'Daimler Truck', lang: 'de-eb' },
+  { slug: 'daimler-truck-en-bsd0', name: 'Daimler Truck', lang: 'en-eb' },
+  { slug: 'europaeisches-parlament-q929', name: 'Europäisches Parlament', lang: 'de-eb' },
 ]
 
 export function getClient(slug: string): ClientDeck | undefined {
