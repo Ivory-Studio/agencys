@@ -10,14 +10,15 @@
 //
 // Set `lang: 'zh'` for the Chinese deck (public/munichre-zh) or
 // `lang: 'en-eb'` for the English employer-branding cut (public/munichre-en-eb),
-// or `lang: 'de-eb'` for the German employer-branding cut (public/munichre-de-eb).
+// or `lang: 'de-eb'` for the German employer-branding cut (public/munichre-de-eb),
+// or `lang: 'de-buch'` for the German book-trailer deck (public/munichre-de-buch).
 // Images and videos always come from public/munichre, so translations
 // only need the HTML files.
 
 export type ClientDeck = {
   slug: string
   name: string
-  lang?: 'de' | 'zh' | 'en-eb' | 'de-eb'
+  lang?: 'de' | 'zh' | 'en-eb' | 'de-eb' | 'de-buch'
   extraReplacements?: [string, string][]
 }
 
@@ -73,6 +74,8 @@ export const clients: ClientDeck[] = [
   { slug: 'daimler-truck-jeka', name: 'Daimler Truck', lang: 'de-eb' },
   { slug: 'daimler-truck-en-bsd0', name: 'Daimler Truck', lang: 'en-eb' },
   { slug: 'europaeisches-parlament-q929', name: 'Europäisches Parlament', lang: 'de-eb' },
+  // Verlage
+  { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
 ]
 
 export function getClient(slug: string): ClientDeck | undefined {

@@ -8,6 +8,7 @@ const langRoots: Record<string, string> = {
   zh: path.join(process.cwd(), 'public', 'munichre-zh'),
   'en-eb': path.join(process.cwd(), 'public', 'munichre-en-eb'),
   'de-eb': path.join(process.cwd(), 'public', 'munichre-de-eb'),
+  'de-buch': path.join(process.cwd(), 'public', 'munichre-de-buch'),
 }
 const contentTypes: Record<string, string> = {
   '.html': 'text/html; charset=utf-8',
