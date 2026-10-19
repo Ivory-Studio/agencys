@@ -76,7 +76,7 @@ export const clients: ClientDeck[] = [
   { slug: 'europaeisches-parlament-q929', name: 'Europäisches Parlament', lang: 'de-eb' },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
-  { slug: 'cosmos-verlag-sn75', name: 'Cosmos Verlag', lang: 'de-buch' },
+  { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
 ]
 
 export function getClient(slug: string): ClientDeck | undefined {
