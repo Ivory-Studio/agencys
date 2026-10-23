@@ -108,6 +108,8 @@ export const clients: ClientDeck[] = [
       ['retzer@ivory-productions.com', 'alex@ivory-productions.com'],
       ['tel:+4915221713237', 'tel:+491797196918'],
       ['+49 152 217 132 37', '+49 179 719 69 18'],
+      // Deutsche Ansprache auf der Startseite und in der Link-Vorschau.
+      ['Hello', 'Hallo'],
     ],
     removeSections: ['netzwerk'],
   },
