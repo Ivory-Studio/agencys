@@ -75,6 +75,7 @@ export const clients: ClientDeck[] = [
   { slug: 'daimler-truck-jeka', name: 'Daimler Truck', lang: 'de-eb' },
   { slug: 'daimler-truck-en-bsd0', name: 'Daimler Truck', lang: 'en-eb' },
   { slug: 'europaeisches-parlament-q929', name: 'Europäisches Parlament', lang: 'de-eb' },
+  { slug: 'nuernberger-versicherung-j8kn', name: 'NÜRNBERGER Versicherung', lang: 'de-eb' },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
   { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
