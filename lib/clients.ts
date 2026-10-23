@@ -85,7 +85,13 @@ export const clients: ClientDeck[] = [
     // Umlautpunkte an die Zeile darueber. Nur fuer diesen Kunden lockern.
     extraReplacements: [
       // !important, weil der Zeilenabstand im h1 inline gesetzt ist.
-      ['</head>', '<style>section#start h1 { line-height: 1.05 !important; }</style></head>'],
+      // Auf dem Handy wird der lange Name sonst mitten im Wort umbrochen.
+      [
+        '</head>',
+        '<style>section#start h1 { line-height: 1.05 !important; }' +
+          '@media (max-width: 700px) { section#start h1 { font-size: clamp(28px, 10.2vw, 72px) !important; } }' +
+          '</style></head>',
+      ],
     ],
     removeSections: ['netzwerk'],
   },
