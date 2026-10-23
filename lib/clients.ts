@@ -101,8 +101,12 @@ export const clients: ClientDeck[] = [
       ],
       [
         'https://bzdfahumhkjas3hb.public.blob.vercel-storage.com/assets/7d8c3a9e33ca15db27a3e54ce8538eb1.jpg',
-        'https://agencys-topaz.vercel.app/films/nuernberger-hero.jpg',
+        'https://agencys-topaz.vercel.app/films/nuernberger-share.jpg',
       ],
+      ['<meta property="og:image:width" content="1920">',
+        '<meta property="og:image:width" content="1200">'],
+      ['<meta property="og:image:height" content="1080">',
+        '<meta property="og:image:height" content="630">'],
       // Ansprechpartner fuer diese Mappe: Alexander von Wasielewski.
       ['Michael Retzer', 'Alexander von Wasielewski'],
       ['retzer@ivory-productions.com', 'alex@ivory-productions.com'],
