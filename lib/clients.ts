@@ -92,6 +92,17 @@ export const clients: ClientDeck[] = [
           '@media (max-width: 700px) { section#start h1 { font-size: clamp(28px, 10.2vw, 72px) !important; } }' +
           '</style></head>',
       ],
+      // Eigenes Startbild (Standbild aus dem LinkedIn-Recruiter-Film).
+      // Erst das Hero-Bild samt Alt-Text, dann die restlichen Vorkommen
+      // der alten URL (og:image und twitter:image).
+      [
+        'src="https://bzdfahumhkjas3hb.public.blob.vercel-storage.com/assets/7d8c3a9e33ca15db27a3e54ce8538eb1.jpg" alt="Still aus der LinkedIn-Kampagne „Trapped in Routine“"',
+        'src="/films/linkedin-recruiter.jpg" alt="Still aus dem LinkedIn-Recruiter-Film von IVORY"',
+      ],
+      [
+        'https://bzdfahumhkjas3hb.public.blob.vercel-storage.com/assets/7d8c3a9e33ca15db27a3e54ce8538eb1.jpg',
+        'https://agencys-topaz.vercel.app/films/linkedin-recruiter.jpg',
+      ],
       // Ansprechpartner fuer diese Mappe: Alexander von Wasielewski.
       ['Michael Retzer', 'Alexander von Wasielewski'],
       ['retzer@ivory-productions.com', 'alex@ivory-productions.com'],
