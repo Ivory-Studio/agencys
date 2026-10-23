@@ -75,7 +75,16 @@ export const clients: ClientDeck[] = [
   { slug: 'daimler-truck-jeka', name: 'Daimler Truck', lang: 'de-eb' },
   { slug: 'daimler-truck-en-bsd0', name: 'Daimler Truck', lang: 'en-eb' },
   { slug: 'europaeisches-parlament-q929', name: 'Europäisches Parlament', lang: 'de-eb' },
-  { slug: 'nuernberger-versicherung-j8kn', name: 'NÜRNBERGER Versicherung', lang: 'de-eb' },
+  {
+    slug: 'nuernberger-versicherung-j8kn',
+    name: 'NÜRNBERGER Versicherung',
+    lang: 'de-eb',
+    // Das Ü beginnt die zweite Zeile; bei line-height 0.86 stossen die
+    // Umlautpunkte an die Zeile darueber. Nur fuer diesen Kunden lockern.
+    extraReplacements: [
+      ['</head>', '<style>section#start h1 { line-height: 1.02; }</style></head>'],
+    ],
+  },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
   { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
