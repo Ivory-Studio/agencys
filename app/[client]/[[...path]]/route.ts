@@ -64,6 +64,15 @@ export async function GET(
         .replaceAll('/munichre/', `/${slug}/`)
         .replaceAll('href="portraits-', `href="/${slug}/portraits-`)
 
+      // Einzelne Abschnitte pro Kunde ausblenden (die Abschnitte sind
+      // Geschwister, verschachtelte <section> gibt es im Deck nicht).
+      for (const id of client.removeSections ?? []) {
+        html = html.replace(
+          new RegExp(`\\n?[ \\t]*<section id="${id}"[\\s\\S]*?\\n[ \\t]*</section>\\n?`, 'g'),
+          '\n',
+        )
+      }
+
       for (const [from, to] of client.extraReplacements ?? []) {
         html = html.replaceAll(from, to)
       }

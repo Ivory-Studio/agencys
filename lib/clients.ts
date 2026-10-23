@@ -20,6 +20,8 @@ export type ClientDeck = {
   name: string
   lang?: 'de' | 'zh' | 'en-eb' | 'de-eb' | 'de-buch'
   extraReplacements?: [string, string][]
+  /** Section-IDs, die fuer diesen Kunden nicht ausgeliefert werden, z. B. ['netzwerk']. */
+  removeSections?: string[]
 }
 
 export const clients: ClientDeck[] = [
@@ -84,6 +86,7 @@ export const clients: ClientDeck[] = [
     extraReplacements: [
       ['</head>', '<style>section#start h1 { line-height: 1.02; }</style></head>'],
     ],
+    removeSections: ['netzwerk'],
   },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
