@@ -84,7 +84,8 @@ export const clients: ClientDeck[] = [
     // Das Ü beginnt die zweite Zeile; bei line-height 0.86 stossen die
     // Umlautpunkte an die Zeile darueber. Nur fuer diesen Kunden lockern.
     extraReplacements: [
-      ['</head>', '<style>section#start h1 { line-height: 1.02; }</style></head>'],
+      // !important, weil der Zeilenabstand im h1 inline gesetzt ist.
+      ['</head>', '<style>section#start h1 { line-height: 1.05 !important; }</style></head>'],
     ],
     removeSections: ['netzwerk'],
   },
