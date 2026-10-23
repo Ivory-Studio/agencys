@@ -92,6 +92,11 @@ export const clients: ClientDeck[] = [
           '@media (max-width: 700px) { section#start h1 { font-size: clamp(28px, 10.2vw, 72px) !important; } }' +
           '</style></head>',
       ],
+      // Ansprechpartner fuer diese Mappe: Alexander von Wasielewski.
+      ['Michael Retzer', 'Alexander von Wasielewski'],
+      ['retzer@ivory-productions.com', 'alex@ivory-productions.com'],
+      ['tel:+4915221713237', 'tel:+491797196918'],
+      ['+49 152 217 132 37', '+49 179 719 69 18'],
     ],
     removeSections: ['netzwerk'],
   },
