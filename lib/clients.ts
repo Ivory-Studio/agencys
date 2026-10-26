@@ -24,6 +24,41 @@ export type ClientDeck = {
   removeSections?: string[]
 }
 
+// Gestaltung der NÜRNBERGER-Mappe: eigenes Startbild, Alexander von Wasielewski als Kontakt,
+// "Hallo" statt "Hello", ohne Netzwerk-Folie. Für weitere Direktkunden-Mappen wiederverwendet.
+const NUERNBERGER_STYLE: [string, string][] = [
+      // !important, weil der Zeilenabstand im h1 inline gesetzt ist.
+      // Auf dem Handy wird der lange Name sonst mitten im Wort umbrochen.
+      [
+        '</head>',
+        '<style>section#start h1 { line-height: 1.05 !important; }' +
+          '@media (max-width: 700px) { section#start h1 { font-size: clamp(28px, 10.2vw, 72px) !important; } }' +
+          '</style></head>',
+      ],
+      // Eigenes Startbild fuer diese Mappe.
+      // Erst das Hero-Bild samt Alt-Text, dann die restlichen Vorkommen
+      // der alten URL (og:image und twitter:image).
+      [
+        'src="https://bzdfahumhkjas3hb.public.blob.vercel-storage.com/assets/7d8c3a9e33ca15db27a3e54ce8538eb1.jpg" alt="Still aus der LinkedIn-Kampagne „Trapped in Routine“"',
+        'src="/films/nuernberger-hero.jpg" alt="Still aus einem Employer-Branding-Film von IVORY"',
+      ],
+      [
+        'https://bzdfahumhkjas3hb.public.blob.vercel-storage.com/assets/7d8c3a9e33ca15db27a3e54ce8538eb1.jpg',
+        'https://agencys-topaz.vercel.app/films/nuernberger-share.jpg',
+      ],
+      ['<meta property="og:image:width" content="1920">',
+        '<meta property="og:image:width" content="1200">'],
+      ['<meta property="og:image:height" content="1080">',
+        '<meta property="og:image:height" content="630">'],
+      // Ansprechpartner fuer diese Mappe: Alexander von Wasielewski.
+      ['Michael Retzer', 'Alexander von Wasielewski'],
+      ['retzer@ivory-productions.com', 'alex@ivory-productions.com'],
+      ['tel:+4915221713237', 'tel:+491797196918'],
+      ['+49 152 217 132 37', '+49 179 719 69 18'],
+      // Deutsche Ansprache auf der Startseite und in der Link-Vorschau.
+      ['Hello', 'Hallo'],
+]
+
 export const clients: ClientDeck[] = [
   { slug: 'defaultagency', name: 'DefaultAgency' },
   { slug: 'accenture-song-w3fj', name: 'Accenture Song' },
@@ -81,42 +116,15 @@ export const clients: ClientDeck[] = [
     slug: 'nuernberger-versicherung-j8kn',
     name: 'NÜRNBERGER Versicherung',
     lang: 'de-eb',
-    // Das Ü beginnt die zweite Zeile; bei line-height 0.86 stossen die
-    // Umlautpunkte an die Zeile darueber. Nur fuer diesen Kunden lockern.
-    extraReplacements: [
-      // !important, weil der Zeilenabstand im h1 inline gesetzt ist.
-      // Auf dem Handy wird der lange Name sonst mitten im Wort umbrochen.
-      [
-        '</head>',
-        '<style>section#start h1 { line-height: 1.05 !important; }' +
-          '@media (max-width: 700px) { section#start h1 { font-size: clamp(28px, 10.2vw, 72px) !important; } }' +
-          '</style></head>',
-      ],
-      // Eigenes Startbild fuer diese Mappe.
-      // Erst das Hero-Bild samt Alt-Text, dann die restlichen Vorkommen
-      // der alten URL (og:image und twitter:image).
-      [
-        'src="https://bzdfahumhkjas3hb.public.blob.vercel-storage.com/assets/7d8c3a9e33ca15db27a3e54ce8538eb1.jpg" alt="Still aus der LinkedIn-Kampagne „Trapped in Routine“"',
-        'src="/films/nuernberger-hero.jpg" alt="Still aus einem Employer-Branding-Film von IVORY"',
-      ],
-      [
-        'https://bzdfahumhkjas3hb.public.blob.vercel-storage.com/assets/7d8c3a9e33ca15db27a3e54ce8538eb1.jpg',
-        'https://agencys-topaz.vercel.app/films/nuernberger-share.jpg',
-      ],
-      ['<meta property="og:image:width" content="1920">',
-        '<meta property="og:image:width" content="1200">'],
-      ['<meta property="og:image:height" content="1080">',
-        '<meta property="og:image:height" content="630">'],
-      // Ansprechpartner fuer diese Mappe: Alexander von Wasielewski.
-      ['Michael Retzer', 'Alexander von Wasielewski'],
-      ['retzer@ivory-productions.com', 'alex@ivory-productions.com'],
-      ['tel:+4915221713237', 'tel:+491797196918'],
-      ['+49 152 217 132 37', '+49 179 719 69 18'],
-      // Deutsche Ansprache auf der Startseite und in der Link-Vorschau.
-      ['Hello', 'Hallo'],
-    ],
+    extraReplacements: NUERNBERGER_STYLE,
     removeSections: ['netzwerk'],
   },
+  // Direktkunden-Kaltakquise 26.10.2026 (Absender Alexander von Wasielewski)
+  { slug: 'weihenstephan-u3wj', name: 'Weihenstephan', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'hensoldt-5xcf', name: 'HENSOLDT', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'hochland-jjsj', name: 'Hochland', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'giesecke-devrient-wf8h', name: 'Giesecke+Devrient', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'oebb-49cp', name: 'ÖBB', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
   { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
