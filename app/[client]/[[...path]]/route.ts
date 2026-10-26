@@ -73,6 +73,12 @@ export async function GET(
         )
       }
 
+      // Zwei Referenz-Abschnitte tauschen. Der eingetauschte Abschnitt übernimmt
+      // id, Nummer ("Referenz 01", "01 / 04") und den "Nächste"-Link seines Platzes.
+      for (const [a, b] of client.swapSections ?? []) {
+        html = swapSections(html, a, b)
+      }
+
       for (const [from, to] of client.extraReplacements ?? []) {
         html = html.replaceAll(from, to)
       }
@@ -89,6 +95,41 @@ export async function GET(
   } catch {
     return new NextResponse('Not found', { status: 404 })
   }
+}
+
+function sectionPattern(id: string) {
+  return new RegExp(`<section id="${id}"[\\s\\S]*?\\n[ \\t]*</section>`)
+}
+
+function slotInfo(section: string) {
+  const id = section.match(/<section id="([^"]+)"/)?.[1] ?? ''
+  const num = id.match(/(\d+)$/)?.[1]?.padStart(2, '0') ?? ''
+  const next = section.match(/<a href="(#[^"]+)"[^>]*>Nächste/)?.[1] ?? ''
+  return { id, num, next }
+}
+
+function fitToSlot(section: string, from: ReturnType<typeof slotInfo>, to: ReturnType<typeof slotInfo>) {
+  let out = section.replace(`<section id="${from.id}"`, `<section id="${to.id}"`)
+  if (from.num && to.num) {
+    out = out.replace(`Referenz ${from.num}`, `Referenz ${to.num}`).replace(`>${from.num} / `, `>${to.num} / `)
+  }
+  if (from.next && to.next) {
+    out = out.replace(new RegExp(`<a href="${from.next}"([^>]*>Nächste)`), `<a href="${to.next}"$1`)
+  }
+  return out
+}
+
+function swapSections(html: string, a: string, b: string) {
+  const sa = html.match(sectionPattern(a))?.[0]
+  const sb = html.match(sectionPattern(b))?.[0]
+  if (!sa || !sb) return html
+  const ia = slotInfo(sa)
+  const ib = slotInfo(sb)
+  const placeholder = '\u0000SWAP\u0000'
+  return html
+    .replace(sa, placeholder)
+    .replace(sb, () => fitToSlot(sa, ia, ib))
+    .replace(placeholder, () => fitToSlot(sb, ib, ia))
 }
 
 export function HEAD() {

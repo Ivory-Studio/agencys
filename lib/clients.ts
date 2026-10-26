@@ -22,6 +22,8 @@ export type ClientDeck = {
   extraReplacements?: [string, string][]
   /** Section-IDs, die fuer diesen Kunden nicht ausgeliefert werden, z. B. ['netzwerk']. */
   removeSections?: string[]
+  // Abschnittspaare tauschen, z. B. [['referenz-1', 'referenz-3']]
+  swapSections?: [string, string][]
 }
 
 // Gestaltung der NÜRNBERGER-Mappe: eigenes Startbild, Alexander von Wasielewski als Kontakt,
@@ -121,7 +123,7 @@ export const clients: ClientDeck[] = [
   },
   // Direktkunden-Kaltakquise 26.10.2026 (Absender Alexander von Wasielewski)
   { slug: 'weihenstephan-u3wj', name: 'Weihenstephan', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
-  { slug: 'wiener-staatsoper-zr9j', name: 'Wiener Staatsoper', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'wiener-staatsoper-zr9j', name: 'Wiener Staatsoper', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
   { slug: 'hochland-jjsj', name: 'Hochland', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'giesecke-devrient-wf8h', name: 'Giesecke+Devrient', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'oebb-49cp', name: 'ÖBB', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
