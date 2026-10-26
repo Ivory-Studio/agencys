@@ -121,7 +121,7 @@ export const clients: ClientDeck[] = [
   },
   // Direktkunden-Kaltakquise 26.10.2026 (Absender Alexander von Wasielewski)
   { slug: 'weihenstephan-u3wj', name: 'Weihenstephan', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
-  { slug: 'hensoldt-5xcf', name: 'HENSOLDT', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'wiener-staatsoper-zr9j', name: 'Wiener Staatsoper', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'hochland-jjsj', name: 'Hochland', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'giesecke-devrient-wf8h', name: 'Giesecke+Devrient', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'oebb-49cp', name: 'ÖBB', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
