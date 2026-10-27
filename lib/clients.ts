@@ -127,6 +127,12 @@ export const clients: ClientDeck[] = [
   { slug: 'hochland-jjsj', name: 'Hochland', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'giesecke-devrient-wf8h', name: 'Giesecke+Devrient', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'oebb-49cp', name: 'ÖBB', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  // Direktkunden-Kaltakquise 27.10.2026 (Absender Alexander von Wasielewski)
+  { slug: 'residenztheater-xxwb', name: 'Residenztheater', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'muenchner-philharmoniker-x7by', name: 'Münchner Philharmoniker', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'andechser-natur-rxua', name: 'Andechser Natur', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'flughafen-wien-84xs', name: 'Flughafen Wien', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'versicherungskammer-rg73', name: 'Versicherungskammer', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
   { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
