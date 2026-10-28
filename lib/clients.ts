@@ -144,6 +144,12 @@ export const clients: ClientDeck[] = [
   { slug: 'vattenfall-q2gp', name: 'Vattenfall', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'enercity-sc7d', name: 'enercity', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'ewe-3a65', name: 'EWE', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-2']] },
+  // Kultur & Wissenschaft 28.10.
+  { slug: 'opernhaus-zuerich-4e49', name: 'Opernhaus Zürich', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'bamberger-symphoniker-hwnf', name: 'Bamberger Symphoniker', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'bregenzer-festspiele-8cva', name: 'Bregenzer Festspiele', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'deutsches-museum-1nuy', name: 'Deutsches Museum', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'brainlab-rx22', name: 'Brainlab', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
   { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
