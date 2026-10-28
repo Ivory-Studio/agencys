@@ -135,10 +135,10 @@ export const clients: ClientDeck[] = [
   { slug: 'versicherungskammer-rg73', name: 'Versicherungskammer', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
   // Direktkunden-Kaltakquise 27.10.2026, Energie (Absender Alexander von Wasielewski)
   { slug: 'wemag-rtha', name: 'WEMAG', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
-  { slug: 'lichtblick-7y33', name: 'LichtBlick', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'lichtblick-7y33', name: 'LichtBlick', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
   { slug: 'statkraft-7phx', name: 'Statkraft', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'pne-ssk6', name: 'PNE', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
-  { slug: 'wpd-jp8q', name: 'wpd', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'wpd-jp8q', name: 'wpd', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'avacon-h9sb', name: 'Avacon', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
   { slug: '50hertz-3x64', name: '50Hertz', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'vattenfall-q2gp', name: 'Vattenfall', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
