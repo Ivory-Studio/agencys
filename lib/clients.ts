@@ -61,6 +61,9 @@ const NUERNBERGER_STYLE: [string, string][] = [
       ['Hello', 'Hallo'],
 ]
 
+// Englische Direktkunden-Mappen: wie NUERNBERGER_STYLE, aber mit "Hello".
+const EN_DIRECT_STYLE: [string, string][] = NUERNBERGER_STYLE.filter(([from]) => from !== 'Hello')
+
 export const clients: ClientDeck[] = [
   { slug: 'defaultagency', name: 'DefaultAgency' },
   { slug: 'accenture-song-w3fj', name: 'Accenture Song' },
@@ -150,6 +153,15 @@ export const clients: ClientDeck[] = [
   { slug: 'bregenzer-festspiele-8cva', name: 'Bregenzer Festspiele', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
   { slug: 'deutsches-museum-1nuy', name: 'Deutsches Museum', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'brainlab-rx22', name: 'Brainlab', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  // Asien/Europa (Hongkong-Hook) 29.10.
+  { slug: 'sungrow-5xyg', name: 'Sungrow', lang: 'en-eb', extraReplacements: EN_DIRECT_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'trinasolar-qoth', name: 'Trinasolar', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'geekplus-c7rg', name: 'Geekplus', lang: 'en-eb', extraReplacements: EN_DIRECT_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'huawei-ujh5', name: 'Huawei', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'jinkosolar-h9kq', name: 'JinkoSolar', lang: 'en-eb', extraReplacements: EN_DIRECT_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'ja-solar-6vq8', name: 'JA Solar', lang: 'en-eb', extraReplacements: EN_DIRECT_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'zte-96wa', name: 'ZTE', lang: 'en-eb', extraReplacements: EN_DIRECT_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'goodwe-pmed', name: 'GoodWe', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
   { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
