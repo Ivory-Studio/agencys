@@ -173,6 +173,17 @@ export const clients: ClientDeck[] = [
   { slug: 'suse-b1cw', name: 'SUSE', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
   { slug: 'datev-b2pf', name: 'DATEV', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'knorr-bremse-ez92', name: 'Knorr-Bremse', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  // Tech 02.11. (zweite Liste)
+  { slug: 'jetbrains-txn8', name: 'JetBrains', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'red-hat-xaj3', name: 'Red Hat', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'workday-cjj9', name: 'Workday', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'google-m98j', name: 'Google', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-7']] },
+  { slug: 'adobe-01us', name: 'Adobe', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-8']] },
+  { slug: 'microsoft-ls20', name: 'Microsoft', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'autodesk-zwol', name: 'Autodesk', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'ibm-g59s', name: 'IBM', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'sap-h3tr', name: 'SAP', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-5']] },
+  { slug: 'apple-awgm', name: 'Apple', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-2']] },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
   { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
