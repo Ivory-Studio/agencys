@@ -165,12 +165,12 @@ export const clients: ClientDeck[] = [
   // Tech & Industrie 02.11.
   { slug: 'ionos-ihw5', name: 'IONOS', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'teamviewer-8x2l', name: 'TeamViewer', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
-  { slug: 'paessler-c39e', name: 'Paessler', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'paessler-c39e', name: 'Paessler', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
   { slug: 'commercetools-rkrc', name: 'commercetools', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'qaware-lqpk', name: 'QAware', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
-  { slug: 'nemetschek-303s', name: 'Nemetschek', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'nemetschek-303s', name: 'Nemetschek', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'infineon-zqm2', name: 'Infineon', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
-  { slug: 'suse-b1cw', name: 'SUSE', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'suse-b1cw', name: 'SUSE', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
   { slug: 'datev-b2pf', name: 'DATEV', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'knorr-bremse-ez92', name: 'Knorr-Bremse', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
   // Verlage
