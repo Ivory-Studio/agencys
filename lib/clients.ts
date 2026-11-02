@@ -162,6 +162,17 @@ export const clients: ClientDeck[] = [
   { slug: 'ja-solar-6vq8', name: 'JA Solar', lang: 'en-eb', extraReplacements: EN_DIRECT_STYLE, removeSections: ['netzwerk'] },
   { slug: 'zte-96wa', name: 'ZTE', lang: 'en-eb', extraReplacements: EN_DIRECT_STYLE, removeSections: ['netzwerk'] },
   { slug: 'goodwe-pmed', name: 'GoodWe', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  // Tech & Industrie 02.11.
+  { slug: 'ionos-ihw5', name: 'IONOS', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'teamviewer-8x2l', name: 'TeamViewer', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'paessler-c39e', name: 'Paessler', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'commercetools-rkrc', name: 'commercetools', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'qaware-lqpk', name: 'QAware', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'nemetschek-303s', name: 'Nemetschek', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'infineon-zqm2', name: 'Infineon', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'suse-b1cw', name: 'SUSE', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'datev-b2pf', name: 'DATEV', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'knorr-bremse-ez92', name: 'Knorr-Bremse', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
   { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
