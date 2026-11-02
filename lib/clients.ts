@@ -163,7 +163,7 @@ export const clients: ClientDeck[] = [
   { slug: 'zte-96wa', name: 'ZTE', lang: 'en-eb', extraReplacements: EN_DIRECT_STYLE, removeSections: ['netzwerk'] },
   { slug: 'goodwe-pmed', name: 'GoodWe', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   // Tech & Industrie 02.11.
-  { slug: 'ionos-ihw5', name: 'IONOS', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'ionos-ihw5', name: 'IONOS', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'teamviewer-8x2l', name: 'TeamViewer', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'paessler-c39e', name: 'Paessler', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'commercetools-rkrc', name: 'commercetools', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
