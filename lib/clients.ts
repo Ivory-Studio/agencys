@@ -61,6 +61,22 @@ const NUERNBERGER_STYLE: [string, string][] = [
       ['Hello', 'Hallo'],
 ]
 
+// Nur das Startbild der NÜRNBERGER-Mappe, ohne Kontakt- und Textänderungen.
+// Die Agenturfassung hat einen anderen Alt-Text ("Szene" statt "Still"),
+// deshalb ein eigener Satz Ersetzungen.
+const NUERNBERGER_HEADER: [string, string][] = [
+  [
+    'src="https://bzdfahumhkjas3hb.public.blob.vercel-storage.com/assets/7d8c3a9e33ca15db27a3e54ce8538eb1.jpg" alt="Szene aus der LinkedIn-Kampagne „Trapped in Routine“"',
+    'src="/films/nuernberger-hero.jpg" alt="Szene aus einem Film von IVORY"',
+  ],
+  [
+    'https://bzdfahumhkjas3hb.public.blob.vercel-storage.com/assets/7d8c3a9e33ca15db27a3e54ce8538eb1.jpg',
+    'https://agencys-topaz.vercel.app/films/nuernberger-share.jpg',
+  ],
+  ['<meta property="og:image:width" content="1920">', '<meta property="og:image:width" content="1200">'],
+  ['<meta property="og:image:height" content="1080">', '<meta property="og:image:height" content="630">'],
+]
+
 // Englische Direktkunden-Mappen: wie NUERNBERGER_STYLE, aber mit "Hello".
 const EN_DIRECT_STYLE: [string, string][] = NUERNBERGER_STYLE.filter(([from]) => from !== 'Hello')
 
@@ -98,7 +114,7 @@ export const clients: ClientDeck[] = [
   { slug: 'dentsu-me5f', name: 'dentsu' },
   { slug: 'fever-mgbf', name: 'Fever' },
   // Nike zuerst, dann LinkedIn
-  { slug: 'leger-2qse', name: 'LeGer', swapSections: [['referenz-1', 'referenz-2']] },
+  { slug: 'leger-2qse', name: 'LeGer', extraReplacements: NUERNBERGER_HEADER, swapSections: [['referenz-1', 'referenz-2']] },
   { slug: 'hello-china-n9kt', name: 'China', lang: 'zh' },
   { slug: 'deutsche-bahn-dpsr', name: 'Deutsche Bahn' },
   { slug: 'db-employer-branding-rdfu', name: 'Deutsche Bahn', lang: 'en-eb' },
