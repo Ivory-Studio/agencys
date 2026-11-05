@@ -97,6 +97,8 @@ export const clients: ClientDeck[] = [
   { slug: 'cheil-worldwide-s7tn', name: 'Cheil Worldwide' },
   { slug: 'dentsu-me5f', name: 'dentsu' },
   { slug: 'fever-mgbf', name: 'Fever' },
+  // Nike zuerst, dann LinkedIn
+  { slug: 'leger-2qse', name: 'LeGer', swapSections: [['referenz-1', 'referenz-2']] },
   { slug: 'hello-china-n9kt', name: 'China', lang: 'zh' },
   { slug: 'deutsche-bahn-dpsr', name: 'Deutsche Bahn' },
   { slug: 'db-employer-branding-rdfu', name: 'Deutsche Bahn', lang: 'en-eb' },
