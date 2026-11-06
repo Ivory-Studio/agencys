@@ -73,6 +73,11 @@ export async function GET(
         )
       }
 
+      // Wagner als eigene Referenz nach vorne: ersetzt den C-Date-Abschnitt (Referenz 06)
+      // durch den Wagner-Spot und nimmt die Wagner-Karte aus "Weitere Referenzen".
+      // Mit swapSections [['referenz-1', 'referenz-6']] steht Wagner dann ganz oben.
+      if (client.feature === 'wagner') html = featureWagner(html)
+
       // Zwei Referenz-Abschnitte tauschen. Der eingetauschte Abschnitt übernimmt
       // id, Nummer ("Referenz 01", "01 / 04") und den "Nächste"-Link seines Platzes.
       for (const [a, b] of client.swapSections ?? []) {
@@ -130,6 +135,22 @@ function swapSections(html: string, a: string, b: string) {
     .replace(sa, placeholder)
     .replace(sb, () => fitToSlot(sa, ia, ib))
     .replace(placeholder, () => fitToSlot(sb, ib, ia))
+}
+
+function featureWagner(html: string) {
+  const slot = html.match(sectionPattern('referenz-6'))?.[0]
+  if (!slot || !slot.includes('>C-Date</h2>')) return html
+  const wagner = slot
+    .replace(/(Referenz 06 — )TVC/, '$1Spot')
+    .replace('>C-Date</h2>', '>Wagner</h2>')
+    .replace('>Liebt, wie ihr es wollt.</div>', '>Levaro. Move it.</div>')
+    .replace(
+      /<p([^>]*)>TV-Spot für C-Date[^<]*<\/p>/,
+      '<p$1>Spot für den Wagner Levaro – Gartenparty, Chaos und ein Gerät, das danach aufräumt. Dreh, Produkt-Shots und Post aus einer Hand.</p>',
+    )
+    .replace('src="/films/cdate-tvc.mp4" poster="/films/cdate-tvc.jpg"', 'src="/films/wagner-levaro.mp4" poster="/films/wagner-levaro.jpg"')
+  const card = /\n[ \t]*<div style="display: flex; flex-direction: column; gap: 16px;">\s*<video src="\/films\/wagner-levaro\.mp4"[\s\S]*?<\/p>\s*<\/div>/
+  return html.replace(slot, () => wagner).replace(card, '')
 }
 
 export function HEAD() {

@@ -24,6 +24,8 @@ export type ClientDeck = {
   removeSections?: string[]
   // Abschnittspaare tauschen, z. B. [['referenz-1', 'referenz-3']]
   swapSections?: [string, string][]
+  /** 'wagner': Wagner-Spot ersetzt C-Date (Referenz 06); mit swapSections [['referenz-1','referenz-6']] steht er vorne. */
+  feature?: 'wagner'
 }
 
 // Gestaltung der NÜRNBERGER-Mappe: eigenes Startbild, Alexander von Wasielewski als Kontakt,
@@ -202,6 +204,35 @@ export const clients: ClientDeck[] = [
   { slug: 'ibm-g59s', name: 'IBM', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   { slug: 'sap-h3tr', name: 'SAP', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-5']] },
   { slug: 'apple-awgm', name: 'Apple', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-2']] },
+  // Leads 06.11.
+  { slug: 'kaercher-ri9z', name: 'Kärcher', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], feature: 'wagner', swapSections: [['referenz-1', 'referenz-6']] },
+  { slug: 'lapp-a5ch', name: 'LAPP', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'ziehl-abegg-cg1r', name: 'ZIEHL-ABEGG', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], feature: 'wagner', swapSections: [['referenz-1', 'referenz-6']] },
+  { slug: 'sew-eurodrive-rlht', name: 'SEW-EURODRIVE', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'reinhausen-j489', name: 'Reinhausen', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'delo-9pul', name: 'DELO', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'kraussmaffei-u0vk', name: 'KraussMaffei', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], feature: 'wagner', swapSections: [['referenz-1', 'referenz-6']] },
+  { slug: 'bauer-2iw7', name: 'BAUER', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], feature: 'wagner', swapSections: [['referenz-1', 'referenz-6']] },
+  { slug: 'palfinger-dygi', name: 'PALFINGER', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], feature: 'wagner', swapSections: [['referenz-1', 'referenz-6']] },
+  { slug: 'tttech-qibx', name: 'TTTech', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'itm-d13p', name: 'ITM', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'siltronic-08qz', name: 'Siltronic', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'eos-rc29', name: 'EOS', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'mobility-house-jdjd', name: 'The Mobility House', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'exploration-company-o9nr', name: 'The Exploration Company', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'isar-aerospace-jzp5', name: 'Isar Aerospace', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-2']] },
+  { slug: 'kontron-9gsb', name: 'Kontron', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'mymuesli-aqko', name: 'mymuesli', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-7']] },
+  { slug: 'douglas-jwo2', name: 'DOUGLAS', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-2']] },
+  { slug: 'mueller-qvzg', name: 'Müller', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'aldi-sued-yvsl', name: 'ALDI SÜD', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'rossmann-4ioz', name: 'ROSSMANN', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'dm-6gx7', name: 'dm', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'fritz-kola-vbin', name: 'fritz-kola', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-8']] },
+  { slug: 's-oliver-bi3c', name: 's.Oliver', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-2']] },
+  { slug: 'ottakringer-l2fm', name: 'Ottakringer', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-8']] },
+  { slug: 'develey-10dx', name: 'Develey', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'ororatech-tyv2', name: 'OroraTech', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
   { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
