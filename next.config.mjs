@@ -9,6 +9,10 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: '/audi-modern-family',
+        destination: '/audi-modern-family/index.html',
+      },
+      {
         source: '/portraits-linkedin.html',
         destination: '/defaultagency/portraits-linkedin.html',
       },

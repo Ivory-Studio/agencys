@@ -85,7 +85,7 @@ const EN_DIRECT_STYLE: [string, string][] = NUERNBERGER_STYLE.filter(([from]) =>
 // Audi: Agenturmappe als Follow-up zum Call am 05.11.2026, mit eigenem Abschnitt
 // "Unser Konzept für Audi", der auf die Konzeptpräsentation im pitches-Projekt verlinkt.
 // Kontakt Alexander von Wasielewski, NÜRNBERGER-Startbild, Porsche-Referenz vorne.
-const AUDI_CONCEPT_URL = 'https://pitches-axxent.vercel.app/audi-modern-family/'
+const AUDI_CONCEPT_URL = 'https://agencys-topaz.vercel.app/audi-modern-family'
 const AUDI_KONZEPT_SECTION = `<section id="konzept" style="min-height: min(100vh, 1000px); box-sizing: border-box; padding: 96px 80px; border-top: 1px solid #26262A; display: flex; flex-direction: column; gap: 40px;">
     <style>@media (max-width: 700px) { section#konzept > div:first-child { flex-direction: row !important; flex-wrap: wrap !important; gap: 4px 12px !important; font-size: 11px !important; } section#konzept > div:nth-child(3) { flex-direction: column !important; gap: 24px !important; } section#konzept > div:nth-child(3) > div { width: 100% !important; flex: none !important; } section#konzept > div:last-child { flex-direction: column !important; align-items: stretch !important; gap: 10px !important; } section#konzept > div:last-child a { text-align: center !important; font-size: 11px !important; } section#konzept div[style*="font-size: 36px"] { font-size: 21px !important; } }</style>
     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">
