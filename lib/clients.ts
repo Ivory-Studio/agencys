@@ -82,6 +82,45 @@ const NUERNBERGER_HEADER: [string, string][] = [
 // Englische Direktkunden-Mappen: wie NUERNBERGER_STYLE, aber mit "Hello".
 const EN_DIRECT_STYLE: [string, string][] = NUERNBERGER_STYLE.filter(([from]) => from !== 'Hello')
 
+// Audi: Agenturmappe als Follow-up zum Call am 05.11.2026, mit eigenem Abschnitt
+// "Unser Konzept für Audi", der auf die Konzeptpräsentation im pitches-Projekt verlinkt.
+// Kontakt Alexander von Wasielewski (ohne das NÜRNBERGER-Startbild), Porsche-Referenz vorne.
+const AUDI_CONCEPT_URL = 'https://pitches-axxent.vercel.app/audi-modern-family/'
+const AUDI_KONZEPT_SECTION = `<section id="konzept" style="min-height: min(100vh, 1000px); box-sizing: border-box; padding: 96px 80px; border-top: 1px solid #26262A; display: flex; flex-direction: column; gap: 40px;">
+    <style>@media (max-width: 700px) { section#konzept > div:first-child { flex-direction: row !important; flex-wrap: wrap !important; gap: 4px 12px !important; font-size: 11px !important; } section#konzept > div:nth-child(3) { flex-direction: column !important; gap: 24px !important; } section#konzept > div:nth-child(3) > div { width: 100% !important; flex: none !important; } section#konzept > div:last-child { flex-direction: column !important; align-items: stretch !important; gap: 10px !important; } section#konzept > div:last-child a { text-align: center !important; font-size: 11px !important; } section#konzept div[style*="font-size: 36px"] { font-size: 21px !important; } }</style>
+    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">
+      <span style="color: #5A77FF;">Unser Konzept für Audi</span>
+      <span style="color: #8E8D87;">Vertical Comedy · 9:16</span>
+    </div>
+    <div style="display: flex; gap: 64px; align-items: flex-start;">
+      <div style="flex: 7 1 0; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+        <h2 style="margin: 0; font-size: 88px; line-height: 0.88; font-weight: 800; letter-spacing: -0.045em; text-transform: uppercase; color: #F5F4EF;">Modern Family</h2>
+        <div style="font-size: 36px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em; text-transform: uppercase; color: #B4B3AD;">Perfect Car. Imperfect Family.</div>
+      </div>
+      <div style="flex: 5 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+        <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #C9C8C2;">Eine fiktionale Vertical-Serie über eine moderne Familie in Garmisch-Partenkirchen – gecastet nach dem Vorbild der Familie Neureuther. Audi ist Teil ihres Alltags, nie Thema.</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #8E8D87;">Mehrere Staffeln à 5 Folgen · bis 60 Sekunden · 9:16</p>
+      </div>
+    </div>
+    <a href="${AUDI_CONCEPT_URL}" target="_blank" rel="noopener" style="display: block;"><img src="/films/audi-modern-family.jpg" alt="Die Familie aus dem Konzept „Modern Family“ beim Frühstück, draußen steht der Audi" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 45%; display: block;"></a>
+    <div style="display: flex; justify-content: flex-end; align-items: center; gap: 16px;">
+      <a href="${AUDI_CONCEPT_URL}" target="_blank" rel="noopener" style="flex-shrink: 0; text-decoration: none; background: #F5F4EF; color: #0A0A0B; padding: 16px 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Konzept ansehen ↗</a>
+      <a href="#ivory" style="flex-shrink: 0; text-decoration: none; border: 1px solid #F5F4EF; padding: 15px 21px; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Über IVORY ↓</a>
+    </div>
+  </section>
+
+  `
+const AUDI_STYLE: [string, string][] = [
+  // Kontakt und "Hallo" aus der NÜRNBERGER-Gestaltung, aber das Standard-Startbild behalten.
+  ...NUERNBERGER_STYLE.filter(([from]) => !from.includes('7d8c3a9e33ca15db27a3e54ce8538eb1') && !from.includes('og:image')),
+  // Konzept-Abschnitt direkt nach dem Start, plus Links in Navigation und Startbutton.
+  ['<section id="ivory"', AUDI_KONZEPT_SECTION + '<section id="ivory"'],
+  ['<a href="#ivory" style="text-decoration: none; color: #E4E3DD;">Über IVORY</a>',
+    '<a href="#konzept" style="text-decoration: none; color: #E4E3DD;">Konzept</a>\n        <a href="#ivory" style="text-decoration: none; color: #E4E3DD;">Über IVORY</a>'],
+  ['<a href="#referenz-1" style="text-decoration: none; background: #F5F4EF; color: #0A0A0B; padding: 20px 28px; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Zu den Referenzen →</a>',
+    '<a href="#konzept" style="text-decoration: none; background: #F5F4EF; color: #0A0A0B; padding: 20px 28px; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">Unser Konzept →</a>'],
+]
+
 export const clients: ClientDeck[] = [
   { slug: 'defaultagency', name: 'DefaultAgency' },
   { slug: 'accenture-song-w3fj', name: 'Accenture Song' },
@@ -233,6 +272,8 @@ export const clients: ClientDeck[] = [
   { slug: 'ottakringer-l2fm', name: 'Ottakringer', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-8']] },
   { slug: 'develey-10dx', name: 'Develey', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
   { slug: 'ororatech-tyv2', name: 'OroraTech', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  // Automotive
+  { slug: 'audi-m7fk', name: 'Audi', extraReplacements: AUDI_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
   // Verlage
   { slug: 'goldmann-verlag-3yba', name: 'Goldmann Verlag', lang: 'de-buch' },
   { slug: 'kosmos-verlag-mu4w', name: 'Kosmos Verlag', lang: 'de-buch' },
