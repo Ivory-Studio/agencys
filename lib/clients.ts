@@ -274,6 +274,19 @@ export const clients: ClientDeck[] = [
   { slug: 'ottakringer-l2fm', name: 'Ottakringer', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-8']] },
   { slug: 'develey-10dx', name: 'Develey', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
   { slug: 'ororatech-tyv2', name: 'OroraTech', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  // Leads 11.11. (Schweiz & Österreich)
+  { slug: 'sk-rapid-nmwj', name: 'SK Rapid', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'hoch-health-x2f6', name: 'HOCH Health Ostschweiz', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'vontobel-lfvg', name: 'Vontobel', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-2']] },
+  { slug: 'kunsthaus-zuerich-2jlr', name: 'Kunsthaus Zürich', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'vat-group-cx4s', name: 'VAT', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'rosenbauer-wtni', name: 'Rosenbauer', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'lucerne-festival-73w1', name: 'Lucerne Festival', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'hirslanden-h4ia', name: 'Hirslanden', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
+  { slug: 'helvetia-baloise-2soi', name: 'Helvetia Baloise', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-2']] },
+  { slug: 'zkb-2p7c', name: 'Zürcher Kantonalbank', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
+  { slug: 'flughafen-zuerich-bkmy', name: 'Flughafen Zürich', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-4']] },
+  { slug: 'avl-vkx6', name: 'AVL', lang: 'de-eb', extraReplacements: NUERNBERGER_STYLE, removeSections: ['netzwerk'] },
   // Automotive
   { slug: 'audi-m7fk', name: 'Audi', extraReplacements: AUDI_STYLE, removeSections: ['netzwerk'], swapSections: [['referenz-1', 'referenz-3']] },
   // Verlage
